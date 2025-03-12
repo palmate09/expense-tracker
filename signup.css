@@ -71,7 +71,6 @@ body{
     padding: 10px;
 }
 
-
 .login-information{
     height: auto;
     width: 70%;
@@ -94,7 +93,8 @@ body{
 }
 
 .login-information input[type="email"],
-.login-information input[type="password"]{
+.login-information input[type="password"],
+.login-information input[type="text"]{
     width: 96%;
     padding: 11px;
     height: 40px;
@@ -117,14 +117,6 @@ body{
     padding-right: 10px;
 }
 
-.login-information label[for="forgotpass"]{
-    display: inline-block;
-    justify-content: end;
-    text-decoration: none;
-    margin-left: 280px;
-    margin-bottom: 18px;
-}
-
 button {
     margin-top: 18px;
     margin-left: 12px;
@@ -144,6 +136,7 @@ button {
 button:hover {
     background-color: darkblue;
 }
+
 
 #login_google{
     margin-top: 18px;
