@@ -108,6 +108,40 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.password-container1{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container1 input{
+    width: 100%;
+}
+
+.password-container2{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container2 input{
+    width: 100%;
+}
+
+.password-container1 img {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    width: 25px;
+}
+
+.password-container2 img{
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    width: 25px;
+}
+
 .login-information input[type="checkbox"]{
     margin-left: 15px;
 }
@@ -135,6 +169,11 @@ button {
 
 button:hover {
     background-color: darkblue;
+}
+
+#text-field{
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
 

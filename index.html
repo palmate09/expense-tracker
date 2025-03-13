@@ -20,10 +20,17 @@
                     <label for="Email">Email</label>
                     <input type="email" placeholder="you@example.com" id="" required>
                     <label for="Password">Password</label>
-                    <input type="password" placeholder="Enter your password" required>
-                    <input type="checkbox" value="isRemember" id="rememberme">
-                    <label for="rememberme">Remember Me</label>
-                    <label for="forgotpass" id="forgotpass">Forgot <a href="">Password?</a></label>
+                    <div class="password-container">
+                        <input type="password" placeholder="Enter your password"  id="password" required>
+                        <img src="photo/passLogo.png" alt="show password" id="imgLogo" style="width: 30px; cursor: pointer;">
+                    </div>
+                    <div class="checkbox-container">
+                        <div class="checkbox-group">
+                            <input type="checkbox" value="isRemember" id="rememberme">
+                            <label for="rememberme">Remember Me</label>
+                        </div>
+                        <label for="forgotpass" id="forgotpass">Forgot <a href="">Password?</a></label>
+                    </div>
                     <button type="submit">Login</button>
                     <h5 id="text">don't have an account?<a href="signup.html">Sign Up</a></h5>
                     <br>

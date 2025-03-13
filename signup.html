@@ -21,14 +21,25 @@
                 <input type="text" placeholder="Enter Your Name">
                 <label for="Email">Email</label>
                 <input type="email" placeholder="you@example.com">
+
                 <label for="Password">Password</label>
-                <input type="password" placeholder="Enter your password">
+                <div class="password-container1">
+                    <input type="password" placeholder="Enter your password">
+                    <img src="photo/passLogo.png" alt="show password" id="imgLogo" style="width: 30px; cursor: pointer;">
+                </div>
+
                 <label for="re-typePassword">Re-Type Password</label>
-                <input type="password" placeholder="Enter your password">
-                <input type="checkbox" id="rememberme">
-                <label for="rememberme">I Agree To Cashflow's <a href="">Terms</a>And <a href="">Policies</a></label>
+                <div class="password-container2">
+                    <input type="password" placeholder="Enter your password">
+                    <img src="photo/passLogo.png" alt="show password" id="imgLogo" style="width: 30px; cursor: pointer;">
+                </div>
+
+                <div class="checkbox-container">
+                    <input type="checkbox" id="rememberme">
+                    <label for="rememberme">I Agree To Cashflow's <a href="www.google.com">Terms</a>And <a href="www.google.com">Policies</a></label>
+                </div>
                 <button type="submit">Sign Up</button>
-                <br>
+                <h4 id="text-field">Already have an account? <a href="index.html">Sign In</a></h4>
                 <br>
                 <hr>
                 <button id="login_google"><img src="photo/image copy.png" alt="img" id="img">Login With Google</button>
