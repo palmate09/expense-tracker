@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="landingPage.css">
+</head>
+<body>
+    <div class="Main-container">
+        <nav class="navigation-bar">
+            <h1>CASHFLOW</h1>
+            <span class="input-box">
+                <input type="text" placeholder="search" id="input-box-text">
+                <img src="photo-landingPage/searchIcon.png" alt="SearchIcon" style="width: 20px; cursor: pointer;" id="SearchIcon">
+            </span>
+            <span class="Admin-box">
+                <img src="photo-landingPage/notificationIcon.png" alt="NotificationIcon" style="width: 20px; cursor: pointer;" id="NotificationIcon">
+                <div class="Admin">
+                    <img src="photo-landingPage/AdminIcon.png" alt="AdminIcon" style="width: 30px; cursor: pointer;"  id="AdminIcon">
+                    <h3>Admin</h3>
+                </div>
+            </span>
+        </nav>
+        <div class="Interface-container">
+            <div class="side-bar">
+                <div class="upper-side-bar">
+                    <div class="dashboard">
+                        <img src="photo-landingPage/DashboardIcon.png" alt="DashboardIcon" style="width: 20px; cursor: pointer;" id="DashboardIcon">
+                        <span id="Dashboard">Dashboard</span>
+                    </div>
+                    <div class="Budget">
+                        <img src="photo-landingPage/BudgetIcon.png" alt="BudgetIcon" style="width: 30px; cursor: pointer;" id="BudgetIcon">
+                        <span id="budget">Budget</span>
+                    </div>
+                    <div class="Report">
+                        <img src="photo-landingPage/RepoartIcon.png" alt="RepoartIcon" style="width: 20px; cursor:pointer" id="RepoartIcon">
+                        <span id="report">Report</span>
+                    </div>
+                </div>
+
+                <div class="lower-side-bar">
+                    <div class="setting">
+                        <img src="photo-landingPage/SettingsIcon.png" alt="SettingsIcon" style="width: 20px; cursor: pointer;" id="SettingsIcon">
+                        <span id="Setting">Settings</span>
+                    </div>
+    
+                    <div class="Log_Out">
+                        <img src="photo-landingPage/LogOutIcon.png" alt="LogOutIcon" style="width: 20px; cursor: pointer;" id="LogOutIcon">
+                        <span style="color: red;" id="logout">Log out</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Main-interface-container">
+                <div class="Dashboard-container">
+                    <h1 id="Dashboard">Dashboard</h1>
+                    <div class="date-container">
+                        <h1 id="month">April</h1>
+                        <span><img src="photo-landingPage/lowerIcon.png" alt="lowerIcon" style="width: 12px; cursor: pointer;"></span>
+                    </div>
+                </div>
+
+                <div class="complete-interface-container">
+                    <div class="left-interface-container">
+                        <div class="Balance-container">
+                            <h4> current balance</h4>
+                        </div>
+                        <div class="Balance-graph-container">
+                            <div class="balance-heading-container">
+                                <h3>Total Balance</h3>
+                                <div class="sign-container">
+                                    <div id="redrect"></div>
+                                    <h5 id="income">Income</h5> 
+                                    <div id="greenrect"></div>
+                                    <h5 id="expenses">Expenses</h5>
+                                </div>
+                            </div>
+                            <div class="axes-container">
+                                <canvas id="axesCanvas" width="680px"></canvas>
+                            </div>
+                        </div>
+                        <div class="Budget-folder-container">
+                            <div class="budeget-heading-container">
+                                <h2>Budget Folder</h2>
+                                <a href="" style="text-decoration: underline;">View All</a>
+                            </div>
+                            <div class="budget-main-interface">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-interface-container">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="landingPage.js"></script>
+</body>
+</html>
