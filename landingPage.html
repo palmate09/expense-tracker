@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="landingPage.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
 <body>
     <div class="Main-container">
@@ -64,7 +65,29 @@
                 <div class="complete-interface-container">
                     <div class="left-interface-container">
                         <div class="Balance-container">
-                            <h4> current balance</h4>
+                            <div class="upper-Balance-container">
+                                <div class="left-canvas-container">
+                                    <h3>Current Balance</h3>
+                                    <h2>Rs.210,000.00</h2>
+                                </div>
+                                <div class="right-canvas-container">
+                                    <canvas id="CircleCanvas" width="499.77" height="156"></canvas>
+                                </div>
+                            </div>
+                            <div class="lower-Balance-container">
+                                <div class="total-income-container">
+                                    <h4>Total Income</h4>
+                                    <h3>Rs.210,000.00</h3>
+                                </div>
+                                <div class="total-income-container">
+                                    <h4>Total Spending</h4>
+                                    <h3>Rs.110,402.09</h3>
+                                </div>
+                                <div class="total-income-container">
+                                    <h4>Total Savings</h4>
+                                    <h3>Rs.90,120.30</h3>
+                                </div>
+                            </div>
                         </div>
                         <div class="Balance-graph-container">
                             <div class="balance-heading-container">
@@ -81,22 +104,119 @@
                             </div>
                         </div>
                         <div class="Budget-folder-container">
-                            <div class="budeget-heading-container">
+                            <div class="budget-heading-container">
                                 <h2>Budget Folder</h2>
-                                <a href="" style="text-decoration: underline;">View All</a>
+                                <a href="" style="text-decoration: underline;" id="view-all-container">View All</a>
                             </div>
                             <div class="budget-main-interface">
-                                
+                                <div class="budget-main-interface-content-container">
+                                    <h4 id="content">Personal Needs</h4>
+                                    <h4 id="content-date">April, 2024</h4>
+                                </div>
+                                <div class="budget-main-interface-content-container">
+                                    <h4 id="content">Personal Needs</h4>
+                                    <h4 id="content-date">April, 2024</h4>
+                                </div>
+                                <div class="budget-main-interface-content-container">
+                                    <h4 id="content">Personal Needs</h4>
+                                    <h4 id="content-date">April, 2024</h4>
+                                </div>
+                                <div class="budget-main-interface-content-container">
+                                    <h4 id="content">Personal Needs</h4>
+                                    <h4 id="content-date">April, 2024</h4>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="right-interface-container">
-
+                        <div class="upper-right-interface-container">
+                            <div class="upper-right-interface-container-heading-container">
+                                <h1>Expense Review</h1>
+                            </div>
+                            <div class="upper-right-interface-container-middle-container">
+                                <div class="canvas-container">
+                                    <canvas id="ChartCanvas" width="180" height="120"></canvas>
+                                </div>
+                                <div class="Canvas-right-container">
+                                    <div class="text-container">
+                                        <svg height="20" width="20" id="svg">
+                                            <circle cx="10" cy="10" r="5" stroke="skyblue" stroke-width="3" fill="skyblue" />
+                                        </svg>
+                                        <h4>Fedding</h4>
+                                    </div>
+                                    <div class="text-container">
+                                        <svg height="20" width="20" id="svg">
+                                            <circle cx="10" cy="10" r="5" stroke="purple" stroke-width="3" fill="purple" />
+                                        </svg>
+                                            <h4>Personal Needs</h4>
+                                    </div>
+                                    <div class="text-container">
+                                        <svg height="20" width="20" id="svg">
+                                            <circle cx="10" cy="10" r="5" stroke="red" stroke-width="3" fill="red" />
+                                        </svg>
+                                        <h4>Woman</h4>
+                                    </div>
+                                    <div class="text-container">
+                                        <svg height="20" width="20" id="svg">
+                                            <circle cx="10" cy="10" r="5" stroke="orange" stroke-width="3" fill="orange" />
+                                        </svg>
+                                        <h4>Transpoart</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="upper-right-interface-container-footer-container">
+                                <h5>
+                                    Goal: we want to manage the money effectly.
+                                </h5>   
+                                <h5>    
+                                    Report: we don't want to waste the money.
+                                </h5>                                    
+                            </div>
+                        </div>
+                        <div class="lower-right-interface-container">
+                            <div class="heading-container">
+                                <h2>Category History</h2>
+                            </div>
+                            <div class="heading-base-container">
+                                <h4>Category</h4>
+                                <h4>Date</h4>
+                                <h4>Description</h4>
+                                <h4>Amount</h4>
+                            </div>
+                            <div class="main-container">
+                                <div class="main-content-container">
+                                    <h4>Food</h4>
+                                    <h4>22/04/24</h4>
+                                    <h4>Beans And Yam</h4>
+                                    <h4 style="color: red;">Rs.1,400</h4>
+                                </div>
+                                <div class="main-content-container">
+                                    <h4>Income</h4>
+                                    <h4>22/04/24</h4>
+                                    <h4>Beans And Yam</h4>
+                                    <h4 style="color: green;">Rs.30,000</h4>
+                                </div>
+                                <div class="main-content-container">
+                                    <h4>Food</h4>
+                                    <h4>22/04/24</h4>
+                                    <h4>Beans And Yam</h4>
+                                    <h4 style="color: red;">Rs.1,400</h4>
+                                </div>
+                                <div class="main-content-container">
+                                    <h4>Food</h4>
+                                    <h4>22/04/24</h4>
+                                    <h4>Beans And Yam</h4>
+                                    <h4 style="color: red;">Rs.1,400</h4>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="circle.js"></script>
     <script src="landingPage.js"></script>
+    <script src="chart.js"></script>
 </body>
 </html>

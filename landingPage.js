@@ -38,8 +38,7 @@ ctx.textAlign = 'right';
 ctx.textBaseline = 'middle'; 
 
 const yAxisHeight = canvasHeight - 2*padding; 
-const tickSpacingY = (yAxisHeight/4); 
-console.log(yAxisHeight) 
+const tickSpacingY = (yAxisHeight/4);  
 
 for(let i = 0; i< numTicksY; i++){
     const y = canvasHeight - padding - i*tickSpacingY; 
