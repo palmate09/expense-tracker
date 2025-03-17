@@ -95,7 +95,6 @@ for(let i = 0; i<numTicksX; i++){
     ctx.fillRect(0, x, height, width);  
 }
 
- 
 
 
 

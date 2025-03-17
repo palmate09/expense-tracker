@@ -4,8 +4,8 @@ const context = circle.getContext('2d');
 const centerX = circle.width;
 const centerY = 0; 
 const color = ['lightgrey', '#2F8A5D','#1C6E43']; 
-const maxRadius = 120; 
-const step = 50; 
+const maxRadius = 150; 
+const step = 40; 
 
 
 for(let i =color.length -1; i>=0; i--){
@@ -15,5 +15,10 @@ for(let i =color.length -1; i>=0; i--){
     context.fill(); 
     context.closePath();  
 }
+
+context.shadowColor = "rgba(50, 50, 50, 0.8)";
+context.shadowBlue = 15; 
+context.shadowOffsetX = 8; 
+context.shadowOffsetY = 8; 
 
 
