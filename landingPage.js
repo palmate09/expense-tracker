@@ -97,4 +97,11 @@ for(let i = 0; i<numTicksX; i++){
 
 
 
+const toggleButton = document.querySelector('.toggle-sidebar-button');
+const sidebar = document.querySelector('.sidebar-container');
+const mainInterface = document.querySelector('.Main-interface-container');
 
+toggleButton.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+    mainInterface.classList.toggle('open');
+});

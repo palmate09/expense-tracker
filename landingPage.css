@@ -20,6 +20,16 @@
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border: 1px solid lightgray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.toggle-sidebar-button{
+    position: fixed;
+    left: 10px;
+    height: 23px;
 }
 
 .navigation-bar h1{
@@ -97,28 +107,35 @@
     display: flex;
     height: 100%;
     background-color:#f0f0f0;
+    padding-top: 60px;
 }
 
-.side-bar{
+.sidebar-container{
     display: flex;
     flex-direction: column;
     align-items: start;
-    padding: 10px;
-    flex:1;
+    flex:0; 
     border: 1px solid lightgrey;
     background-color: white;
     position: relative;
-    /* position: fixed; */
-    /* left: 100px; */
     bottom: 1px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+    /* width: 0; */
+    transition: width 0.1s ease;
+    overflow-x: hidden;
 }
+
+.sidebar-container.open{
+    flex:0.8;
+    padding: 10px;
+}   
 
 .upper-side-bar{
     display: flex;
     flex-direction: column;
     flex: 6;
     width: 100%;
+    padding: 10px;
 }
 
 .dashboard{
@@ -219,6 +236,7 @@
     flex: 1;
     width: 100%;
     padding: 10px;
+    justify-content: end;
 }
 
 .setting{
@@ -287,6 +305,12 @@
     background-color: white;
     display: flex;
     flex-direction: column;
+    transition: flex 0.3s ease;
+    height: 100%;
+}
+
+.Main-interface-container.open{
+    flex: 5; 
 }
 
 .Dashboard-container{
