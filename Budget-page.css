@@ -1,0 +1,462 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.Main-container{
+    height: 100vh;
+    display: flex;
+    background-color: #f0f0f0;
+    flex-direction: column;
+}
+
+.navigation-bar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid lightgray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.toggle-sidebar-button{
+    position: fixed;
+    left: 10px;
+    height: 23px;
+}
+
+.navigation-bar h1{
+    margin-left: 50px;
+    font-weight: bolder;
+    font-size: 33px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style:inherit;
+    font-stretch: expanded;
+}
+
+.input-box{
+    flex:2; 
+    display: flex;
+    width: 400px;
+    position: relative;
+    justify-content: center;
+}
+
+.input-box #input-box-text{
+    height: 38px;
+    width: 350px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    display: flex;
+    justify-content: start;
+    padding: 10px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.input-box #SearchIcon{
+    height: 25px;
+    width: 10px;
+    position: relative;
+    top: 6px;
+    right: 25px;
+}
+
+
+.Admin-box {
+    flex: 3; 
+    display: flex;
+    justify-content: end;
+    width: 200px;
+    position: relative;
+    right: 100px;
+}
+
+.Admin-box #NotificationIcon{
+    height: 23px;
+    width: 12px;
+    position: relative;
+    top: 6px;
+    right: 20px;
+}
+
+.Admin{
+    display: flex;
+    height: 30px;
+    width: 30px;
+}
+
+.Admin h3{
+    position: relative;
+    top: 9px;
+    margin-left: 2px;
+    font-weight: normal;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Interface-container{
+    display: flex;
+    height: 100%;
+    background-color:#f0f0f0;
+    padding-top: 60px;
+}
+
+.sidebar-container{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    flex:0.8; 
+    border: 1px solid lightgrey;
+    background-color: white;
+    position: relative;
+    bottom: 1px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+    /* width: 0; */
+    transition: width 0.1s ease;
+    overflow-x: hidden;
+}
+
+/* .sidebar-container.open{
+    flex:0.8;
+    padding: 10px;
+}    */
+
+.upper-side-bar{
+    display: flex;
+    flex-direction: column;
+    flex: 6;
+    width: 100%;
+    padding: 10px;
+}
+
+.dashboard{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+
+.dashboard #DashboardIcon{
+    width:25px;
+    position: relative;
+    top: 2px;
+    left: 6px;
+}
+
+.dashboard #Dashboard{
+    color: black;
+    position: relative;
+    left:18px;
+    font-weight: bold;
+    font-size: 18px;
+    bottom: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dashboard:hover{
+    background-color: green;
+    border: 1px solid green;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Budget{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.Budget #BudgetIcon{
+    width:25px;
+    position: relative;
+    top: 4px;
+    left: 2px;
+}
+
+.Budget #budget{
+    color: black;
+    position: relative;
+    left:12px;
+    font-weight: bold;
+    font-size: 18px;
+    bottom: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Budget:hover{
+    background-color: green;
+    border: 1px solid green;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Report {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: white;
+    padding-left: 16px;
+}
+
+.Report #ReportIcon{
+    width:20px;
+    position: relative;
+    top: 8px;
+    left: 3px;
+}
+
+.Report #report{
+    color: black;
+    position: relative;
+    left:12px;
+    font-weight: bold;
+    font-size: 18px;
+    bottom: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Report:hover{
+    background-color: green;
+    border: 1px solid green;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.lower-side-bar{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    padding: 10px;
+    justify-content: end;
+}
+
+.setting{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.setting #SettingIcon{
+    width:25px;
+    position: relative;
+    top: 4px;
+    left: 6px;
+}
+
+.setting #Setting{
+    color: black;
+    position: relative;
+    left:10px;
+    font-weight: bold;
+    font-size: 18px;
+    bottom: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.setting:hover{
+    background-color: green;
+    border: 1px solid green;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.Log_Out{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.Log_Out #LogOutIcon{
+    width:25px;
+    position: relative;
+    top: 4px;
+    left: 4px;
+}
+
+.Log_Out #logout{
+    color: black;
+    position: relative;
+    left:10px;
+    font-weight: bold;
+    font-size: 18px;
+    bottom: -1px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Log_Out:hover{
+    background-color: green;
+    border: 1px solid green;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Main-interface-container{
+    flex:5;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    transition: flex 0.3s ease;
+    height: 100%;
+}
+
+
+/* .Main-interface-container.open{
+    flex: 5; 
+} */
+
+
+.Budget-container{
+    display: flex;
+    padding: 20px;
+    width: 99%;
+    height: 100px;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 10px;
+    align-items: center;  
+}
+
+.Budget-container #Budget{
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: bolder;
+}
+
+.monthSelect{
+    width: 105px;
+    height: 42px;
+    display: flex;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+    position: relative;
+    background-color: white;
+}
+
+.date-container #month{
+    position: relative;
+    bottom: 5px;
+    left: 2px;
+    font-weight: normal;
+    font-size: 16px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.date-container #LowerIcon{
+    position: relative;
+    left: 10px;
+    bottom: 0px;
+}
+
+.complete-interface-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.left-interface-container{
+    flex: 0.6;
+    /* background-color: white; */
+    display: flex;
+    flex-direction: column;
+}
+
+.Budget-folder-container{
+    display: flex;
+    padding: 20px;
+    margin: 20px;
+    margin-left: 45px;
+    border: 1px solid white;
+    height: 100%;
+    width: 85%;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow:  0px 4px 10px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+}
+
+.budget-folder-heading-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex: 0.6;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.budget-folder-heading-container h3{
+    padding-top: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.budget-folder-heading-container #create-folder{
+    padding-top: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 16px;
+    color: green;
+}
+
+.budget-folder-heading-container #create-folder:hover{
+    color: red;
+}
+
+
+.budget-folder-main-interface{
+    flex: 4;
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.Personal-Needs-container{
+    margin-bottom: 20px;
+    margin-top: 10px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    padding-left: 20px;
+    border-radius: 10px;
+    background: rgba(217, 217, 217, 0.172);
+}
+
+.Personal-Needs-container:hover{
+    background-color: green;
+}
+
+.Personal-Needs{
+    display: flex;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.Personal-Needs h2{
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.right-interface-container{
+    flex: 1; 
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
