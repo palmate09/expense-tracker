@@ -1,0 +1,541 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.Main-container{
+    height: 100vh;
+    display: flex;
+    background-color: #f0f0f0;
+    flex-direction: column;
+}
+
+.navigation-bar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid lightgray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.toggle-sidebar-button{
+    position: fixed;
+    left: 10px;
+    height: 23px;
+}
+
+.navigation-bar h1{
+    margin-left: 50px;
+    font-weight: bolder;
+    font-size: 33px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style:inherit;
+    font-stretch: expanded;
+}
+
+.input-box{
+    flex:2; 
+    display: flex;
+    width: 400px;
+    position: relative;
+    justify-content: center;
+}
+
+.input-box #input-box-text{
+    height: 38px;
+    width: 350px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    display: flex;
+    justify-content: start;
+    padding: 10px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.input-box #SearchIcon{
+    height: 25px;
+    width: 10px;
+    position: relative;
+    top: 6px;
+    right: 25px;
+}
+
+
+.Admin-box {
+    flex: 3; 
+    display: flex;
+    justify-content: end;
+    width: 200px;
+    position: relative;
+    right: 100px;
+}
+
+.Admin-box #NotificationIcon{
+    height: 23px;
+    width: 12px;
+    position: relative;
+    top: 6px;
+    right: 20px;
+}
+
+.Admin{
+    display: flex;
+    height: 30px;
+    width: 30px;
+}
+
+.Admin h3{
+    position: relative;
+    top: 9px;
+    margin-left: 2px;
+    font-weight: normal;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Interface-container{
+    display: flex;
+    height: 100%;
+    background-color:#f0f0f0;
+    padding-top: 60px;
+}
+
+.sidebar-container{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    flex:0.8; 
+    border: 1px solid lightgrey;
+    background-color: white;
+    position: relative;
+    bottom: 1px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+    /* width: 0; */
+    transition: width 0.1s ease;
+    overflow-x: hidden;
+}
+
+/* .sidebar-container.open{
+    flex:0.8;
+    padding: 10px;
+}    */
+
+.upper-side-bar{
+    display: flex;
+    flex-direction: column;
+    flex: 6;
+    width: 100%;
+    padding: 10px;
+}
+
+.dashboard{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+
+.dashboard #DashboardIcon{
+    width:25px;
+    position: relative;
+    top: 2px;
+    left: 6px;
+}
+
+.dashboard #Dashboard{
+    color: black;
+    position: relative;
+    left:18px;
+    font-weight: bold;
+    font-size: 18px;
+    bottom: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dashboard:hover{
+    background-color: green;
+    border: 1px solid green;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Budget{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.Budget #BudgetIcon{
+    width:25px;
+    position: relative;
+    top: 4px;
+    left: 2px;
+}
+
+.Budget #budget{
+    color: black;
+    position: relative;
+    left:12px;
+    font-weight: bold;
+    font-size: 18px;
+    bottom: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Budget:hover{
+    background-color: green;
+    border: 1px solid green;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Report {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: white;
+    padding-left: 16px;
+}
+
+.Report #ReportIcon{
+    width:20px;
+    position: relative;
+    top: 8px;
+    left: 3px;
+}
+
+.Report #report{
+    color: black;
+    position: relative;
+    left:12px;
+    font-weight: bold;
+    font-size: 18px;
+    bottom: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Report:hover{
+    background-color: green;
+    border: 1px solid green;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.lower-side-bar{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    padding: 10px;
+    justify-content: end;
+}
+
+.setting{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.setting #SettingIcon{
+    width:25px;
+    position: relative;
+    top: 4px;
+    left: 6px;
+}
+
+.setting #Setting{
+    color: black;
+    position: relative;
+    left:10px;
+    font-weight: bold;
+    font-size: 18px;
+    bottom: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.setting:hover{
+    background-color: green;
+    border: 1px solid green;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.Log_Out{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.Log_Out #LogOutIcon{
+    width:25px;
+    position: relative;
+    top: 4px;
+    left: 4px;
+}
+
+.Log_Out #logout{
+    color: black;
+    position: relative;
+    left:10px;
+    font-weight: bold;
+    font-size: 18px;
+    bottom: -1px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Log_Out:hover{
+    background-color: green;
+    border: 1px solid green;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Main-interface-container{
+    flex:5;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    transition: flex 0.3s ease;
+    height: 100%;
+}
+
+.Expenses-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin: 10px;
+    height: 100px;
+    /* border-bottom: 1px solid black; */
+    align-items: center;
+}
+
+.Expenses-container h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: green;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.SearchInput{
+    display: flex;
+    align-items: center;
+    width: 350px;
+}
+
+.SearchInput input{
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid lightgrey;
+    margin-right: 10px;
+    padding-left: 30px;
+    font-size: 15px;
+}
+
+.bi_bi-search{
+    position: relative;
+    left: 22px;
+}
+
+
+.ExportInput-container{
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    align-items: center;
+    gap: 0px;
+}
+
+.Export-container{
+    width: 130px;
+    margin-right: 40px;
+}
+
+.ExportInput-container #Export{
+    width: 100px;
+    height: 40px;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-right: 25px;
+    background-color: green;
+    border: 1px solid green;
+    border-radius: 5px;
+    color: white;
+}
+
+.ExportInput-container svg{
+    position: relative;
+    right: 35px;
+    top: 10px;
+}
+
+
+.monthSelect{
+    width: 95px;
+    height: 42px;
+    display: flex;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+    position: relative;
+    background-color: white;
+    padding-right: 15px;
+}
+
+.date-container #month{
+    position: relative;
+    bottom: 5px;
+    left: 2px;
+    font-weight: normal;
+    font-size: 16px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.date-container #LowerIcon{
+    position: relative;
+    left: 10px;
+    bottom: 0px;
+}
+
+
+.complete-interface-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    gap: 10px;
+}
+
+
+.Income-details-container{
+    flex: 1; 
+    display:  flex;
+    border: 1px solid white;
+    background-color: white;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow:  0px 4px 10px rgba(235, 232, 232, 0.904);
+    margin-left: 20px;
+    margin-right: 20px;
+    flex-direction: column;
+}
+
+.heading-income-details-container{
+    display: flex;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 2px solid lightgrey;
+}
+
+.heading-income-details-container h1{
+    font-size: 22px;
+    color: black;
+}
+
+
+.Table-container{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-bottom: 1px solid lightgrey;
+    margin-bottom: 15px;
+}
+
+.Table-container h3{
+    margin-bottom: 5px;
+    margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.Table-container1{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-bottom: 1px solid lightgrey;
+    margin-bottom: 15px;
+}
+
+.Table-container1 h3{
+    margin-left: 10px;
+}
+
+.Table-container1 #income-container{
+    margin-right: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.Table-container1 #expense-container{
+    margin-right: 170px;
+}
+
+.Category-History-container{
+    flex: 1;
+    border-bottom: 1px solid white;
+    display:flex;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow:  0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-left: 20px;
+    margin-right: 20px;
+    flex-direction: column;
+}
+
+
+.heading-history-container{
+    flex: 1; 
+    display: flex;
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    border-bottom: 2px solid lightgrey;
+    width: 97.5%;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+
+.main-history-container{
+    flex: 7; 
+    display: flex;
+    width: 100%;
+    padding-left: 20px;
+    flex-direction: column;
+}
+
+.table-heading{
+    display: flex;
+    width: 98.5%;
+    justify-content: space-between;
+    height: 15%;
+    border-bottom: 1px solid lightgrey;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    align-items: end;
+}
+
+
+
+
+
+
+
